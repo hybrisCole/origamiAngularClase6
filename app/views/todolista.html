@@ -7,7 +7,7 @@
             Por hacer!</h3>
         </div>
         <ul class="list-group">
-          <a href="#" ng-repeat="todo in todos" class="list-group-item">{{todo}}</a>
+          <a href="javascript:void(0);" ng-repeat="todo in todosPorHacer" ng-click="cambiarStatus(todo)" class="list-group-item">{{todo.description}}</a>
         </ul>
       </div>
     </div>
@@ -18,11 +18,7 @@
             Listos!</h3>
         </div>
         <ul class="list-group">
-          <!-- <a href="#" class="list-group-item">Cras justo odio</a>
-          <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-          <a href="#" class="list-group-item">Morbi leo risus</a>
-          <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-          <a href="#" class="list-group-item">Vestibulum at eros</a> -->
+          <a href="javascript:void(0);" ng-repeat="todo in todosListos" ng-click="cambiarStatus(todo)" class="list-group-item">{{todo.description}}</a>
         </ul>
       </div>
     </div>

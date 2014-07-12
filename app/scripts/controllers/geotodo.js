@@ -9,14 +9,21 @@
  */
 angular.module('noBackendApp')
   .controller('GeotodoCtrl', function ($scope, $firebase) {
-    var todoRef = new Firebase('https://amber-fire-9628.firebaseio.com/people');
+    var todoRef = new Firebase('https://amber-fire-9628.firebaseio.com/geoTodo');
 
     // Automatically syncs everywhere in realtime
     $scope.todos = $firebase(todoRef);
 
     $scope.agregarTodo = function(){
+      var timeStamp = new Date().valueOf(),
+          itemRef = new  Firebase('https://amber-fire-9628.firebaseio.com/geoTodo/' + timeStamp );
+
       // AngularFire $add method
-      $scope.todos.$add($scope.todoDescription);
+      $firebase(itemRef).$set({
+        id: timeStamp,
+        description:$scope.todoDescription,
+        status:false
+      });
       $scope.todoDescription = "";
     };
   });

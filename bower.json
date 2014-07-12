@@ -14,7 +14,8 @@
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
     "firebase": "1.0.17",
-    "firebase-angular":"https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"
+    "firebase-angular": "https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
