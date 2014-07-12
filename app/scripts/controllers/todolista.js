@@ -30,6 +30,10 @@ angular.module('noBackendApp')
       $firebase(itemRef).$set(todo);
     };
 
+    $scope.eliminarStatus = function(id){
+      $firebase(todoRef).$remove(id);
+    };
+
     todoRef.on('child_changed', function(snapshot) {
       $scope.todosPorHacer = _.where($scope.todos, { 'status': false });
       $scope.todosListos = _.where($scope.todos, { 'status': true });

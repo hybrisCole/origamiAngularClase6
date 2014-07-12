@@ -7,7 +7,10 @@
             Por hacer!</h3>
         </div>
         <ul class="list-group">
-          <a href="javascript:void(0);" ng-repeat="todo in todosPorHacer" ng-click="cambiarStatus(todo)" class="list-group-item">{{todo.description}} || {{todo.geoPos.coords.latitude}} {{todo.geoPos.coords.longitude}}</a>
+          <li ng-repeat="todo in todosPorHacer">
+            <a href="javascript:void(0);"  ng-click="cambiarStatus(todo)" class="list-group-item">{{todo.description}} || {{todo.geoPos.coords.latitude}} {{todo.geoPos.coords.longitude}}</a>
+            <a href="javascript:void(0);"  ng-click="eliminarStatus(todo.id)" class="btn btn-lg btn-primary btn-block">X</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -18,7 +21,10 @@
             Listos!</h3>
         </div>
         <ul class="list-group">
-          <a href="javascript:void(0);" ng-repeat="todo in todosListos" ng-click="cambiarStatus(todo)" class="list-group-item">{{todo.description}} || {{todo.geoPos.coords.latitude}} {{todo.geoPos.coords.longitude}}</a>
+          <li ng-repeat="todo in todosListos">
+            <a href="javascript:void(0);"  ng-click="cambiarStatus(todo)" class="list-group-item">{{todo.description}} || {{todo.geoPos.coords.latitude}} {{todo.geoPos.coords.longitude}}</a>
+            <a href="javascript:void(0);"  ng-click="eliminarStatus(todo.id)" class="btn btn-lg btn-primary btn-block">X</a>
+          </li>
         </ul>
       </div>
     </div>
