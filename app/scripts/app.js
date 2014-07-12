@@ -32,6 +32,10 @@ angular
         templateUrl: 'views/geotodo.html',
         controller: 'GeotodoCtrl'
       })
+      .when('/todoLista', {
+        templateUrl: 'views/todolista.html',
+        controller: 'TodolistaCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
