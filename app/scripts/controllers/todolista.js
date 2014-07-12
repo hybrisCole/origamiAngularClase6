@@ -34,5 +34,4 @@ angular.module('noBackendApp')
       $scope.todosPorHacer = _.where($scope.todos, { 'status': false });
       $scope.todosListos = _.where($scope.todos, { 'status': true });
     });
-
   });
